@@ -54,3 +54,42 @@ footer {
 
 /* Version computer (768px à 1200px) */
 
+@media only screen and (min-width:768px) {
+   
+#PC {
+    display: flex;
+    /background-color: aqua;
+    margin: 2rem;
+    border-radius: 0.5rem;
+    height: 600px;
+}
+
+#Priorites {
+    width: 30rem;
+    display: flex;
+    flex-direction: column;
+}
+
+#Objectifs {
+    width: 30rem;
+    display: flex;
+    flex-direction: column;
+}
+
+#Taches {
+    width: 30rem;
+    display: flex;
+    flex-direction: column;
+}
+
+h2 {
+    text-align: center;
+}
+
+section h1 {
+    height:5rem;
+    display: flex;
+    
+}
+
+}
