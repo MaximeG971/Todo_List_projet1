@@ -79,7 +79,6 @@ footer {
    
 #PC {
     display: flex;
-    /background-color: aqua;
     margin: 2rem;
     border-radius: 0.5rem;
     height: 600px;
