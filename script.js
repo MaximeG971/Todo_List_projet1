@@ -21,7 +21,7 @@ changeThemeBtn.addEventListener('click', () => {
         toggleTheme++;
     } else {
         document.documentElement.style.setProperty('--ecriture','#fff8f0');
-        document.documentElement.style.setProperty('--background','#262626');
+        document.documentElement.style.setProperty('--background','#262626'); // voir Midnight City sur uiGradients
         toggleTheme--;
     }
 })

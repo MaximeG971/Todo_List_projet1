@@ -51,7 +51,7 @@ section h2 {
     color: var(--ecriture);
 }
 
-#Date_heure {
+#dateHeure {
     margin-top: 0.5rem;
     border-radius: 0.5rem;
     background: #3b6868;
