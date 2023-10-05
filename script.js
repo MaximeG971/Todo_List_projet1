@@ -12,16 +12,16 @@ function closeModal(){
     overlay.style.display = 'none'
 };
 
-const changeThemeBtn = document.querySelector('.changeTheme');
+const changeThemeBtn = document.querySelector('.icone');
 let toggleTheme = 0;
 changeThemeBtn.addEventListener('click', () => {
     if(toggleTheme === 0) {
         document.documentElement.style.setProperty('--ecriture','#262626');
-        document.documentElement.style.setProperty('--background','#fff8f0');
+        document.documentElement.style.setProperty('--background','linear-gradient(to top, #076585, #fff)');
         toggleTheme++;
     } else {
         document.documentElement.style.setProperty('--ecriture','#fff8f0');
-        document.documentElement.style.setProperty('--background','#262626'); // voir Midnight City sur uiGradients
+        document.documentElement.style.setProperty('--background','linear-gradient(to top, #232526, #414345)'); // voir Midnight City sur uiGradients
         toggleTheme--;
     }
 })
