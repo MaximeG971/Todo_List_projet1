@@ -7,7 +7,7 @@
 
 :root {
     --ecriture: #262626;
-    --background: #fff8f0;
+    --background: linear-gradient(to top, #076585, #fff);
 }
 
 body {
@@ -20,7 +20,6 @@ body {
 /* nav */
 nav {
     padding: 0.5rem;
-    background-color: #A71D31;
     justify-content: space-between;
 }
 
