@@ -5,9 +5,13 @@
     box-sizing: border-box;
 }
 
+html {
+    height: 100%;
+}
+
 :root {
     --ecriture: #262626;
-    --background: #fff8f0;
+    --background: linear-gradient(to top, #076585, #e5e5e5);;
 }
 
 body {
@@ -20,8 +24,12 @@ body {
 /* nav */
 nav {
     padding: 0.5rem;
-    background-color: #A71D31;
     justify-content: space-between;
+}
+
+img {
+    max-width: 100px;
+    height: auto;
 }
 
 nav h1 {
@@ -39,6 +47,10 @@ nav div {
     justify-content: end;
 }
 
+.icone {
+    cursor: pointer;
+}
+
 /* section */
 section {
     padding: 0.5rem;
@@ -47,14 +59,37 @@ section {
     color: var(--ecriture);
 }
 
-section h2 {
-    color: var(--ecriture);
+#priorites {
+    min-width: 33%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-#Date_heure {
-    margin-top: 0.5rem;
+#objectifs {
+    min-width: 33%;
+}
+
+#taches {
+    min-width: 33%;
+}
+
+section h2 {
+    color: var(--ecriture);
     border-radius: 0.5rem;
-    background: #3b6868;
+    background: linear-gradient(to top, #8e9eab, #eef2f3);
+    box-shadow: 3px 3px 14px 7px #525050;
+    text-align: center;
+}
+
+.dateHeure {
+    color: #262626;
+}
+
+#dateHeure {
+    margin: auto;
+    border-radius: 0.5rem;
+    background: linear-gradient(to top, #8e9eab, #eef2f3);
+    box-shadow: 3px 3px 14px 7px #525050;
     width: 40%;
     text-align: center;
 }
@@ -65,11 +100,11 @@ section > article {
     margin: 0 .5rem 1rem;
     width: 80%;
     border-radius: 0.5rem;
-    background-color: #3b6868;
+    background: linear-gradient(to top, #8e9eab, #eef2f3);
 }
 
-/*Ajout (Younes)*/
-.Add {
+
+.add {
     background-color: aquamarine;
     width: 58px;
     height: 63px;
@@ -84,7 +119,6 @@ section > article {
     position: fixed;
     left: 0px;
     top: 0px;
-    background-color: rgba (0,0,0,0.5);
     width: 100%;
     height: 100%;
     display: none;
@@ -93,10 +127,11 @@ section > article {
 .popup {
     margin: 20% auto;
     width: 70%;
-    background-color: rgb (228, 228, 228);
+    background: linear-gradient(to top, #8e9eab, #eef2f3);
     border-radius: 5px;
     box-shadow: 15px 20px 0 rgba (0,0,0,0.5);
     padding: 1em;
+    border: 1px solid black;
 }
 
 .btnClose {
@@ -104,11 +139,16 @@ section > article {
     cursor: pointer;
 }
 
+#taskDesc, #taskName, #objectiveDesc, #objectiveName {
+    width: 90%;
+}
+
+
 /* footer */
-footer {
-    padding: 1rem;
-    background-color: #A71D31;
+#auteurs {
     color: var(--ecriture);
+    position: absolute;
+    bottom: 0;
 }
 
 /* Version computer (768px à 1200px) */
@@ -117,28 +157,9 @@ footer {
    
 #PC {
     display: flex;
-    /background-color: aqua;
     margin: 2rem;
     border-radius: 0.5rem;
     height: 600px;
-}
-
-#Priorites {
-    width: 30rem;
-    display: flex;
-    flex-direction: column;
-}
-
-#Objectifs {
-    width: 30rem;
-    display: flex;
-    flex-direction: column;
-}
-
-#Taches {
-    width: 30rem;
-    display: flex;
-    flex-direction: column;
 }
 
 h2 {
@@ -148,7 +169,14 @@ h2 {
 section h1 {
     height:5rem;
     display: flex;
+}
+
+#objectifs {
+    min-width: 33%;
     
 }
 
+#taches {
+    min-width: 33%;
+}
 }

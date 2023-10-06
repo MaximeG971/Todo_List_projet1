@@ -4,68 +4,85 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo List</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tabler-icons/1.35.0/iconfont/tabler-icons.min.css" integrity="sha512-tpsEzNMLQS7w9imFSjbEOHdZav3/aObSESAL1y5jyJDoICFF2YwEdAHOPdOr1t+h8hTzar0flphxR76pd0V1zQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <nav>
-        <h1 id="Todo_list">Todo List</h1>
-        <div class="changeTheme">Light Mode / Dark Mode</div>
+        <h1 id="todoList"><img src="https://cdn.icon-icons.com/icons2/1859/PNG/512/checklist_117966.png"></h1>
+        <div class="changeTheme">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icone" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
+                <path d="M12 3l0 18"></path>
+                <path d="M12 9l4.65 -4.65"></path>
+                <path d="M12 14.3l7.37 -7.37"></path>
+                <path d="M12 19.6l8.85 -8.85"></path>
+             </svg>
+             Light & Dark
+        </div>
     </nav>
 <main id="main">
-    <section id="Date_heure">
-        <h2> Date & Heure </h2>
+    <section id="dateHeures">
+        <div id="dateHeure">
+            Nous sommes le <span id="date"></span>, il est <span id="heure"></span>.
+          </div>   
     </section>
     <topSectionPC id="PC">
-    <section id="Priorites">
+    <section id="priorites">
         <h2>Priorités</h2>
-        <article>
-            <h1 class="priorite1">Priorité 1</h1>
-        </article>
-        <article>
-            <h1>Priorité 2</h1>
-        </article>
-        <article>
-            <h1>Priorité 3</h1>
-        </article>
     </section>
-    <section id="Objectifs">
+    <section id="objectifs">
         <h2>Objectifs</h2>
-        <article>
-            <h1 class="objectif1">Objectif 1</h1>
-        </article>
-        <article>
-            <h1>Objectif 2</h1>
-        </article>
-        <article>
-            <h1>Objectif 3</h1>
-        </article>
     </section>
-    <section id="Taches">
+    <section id="taches">
         <h2>Tâches</h2>
-        <article>
-            <h1 class="tache1">Tâche 1</h1>
-        </article>
-        <article>
-            <h1>Tâche 2</h1>
-        </article>
-        <article>
-            <h1>Tâche 3</h1>
-        </article>
     </section>
     <!--Ajout de la tâche/objectif/catégorie (Younes)-->
-    <button class="Add" id="Add">+</button>
-    <div id ="overlay" class="overlay">
+    <button class="add" id="add">+</button>
+    <div id="overlay" class="overlay">
         <div id="popup" class="popup">
-            <h1>Nouvelle tâche
-            <span id="btnClose" class="btnClose">&times;</span>
-            </h1>
-            <p>Veuillez ajouter une nouvelle tâche</p>
+            <button class="btnClose" id="btnClose">X</button>
+            <h1>Créer une nouvelle tâche ou un nouvel objectif</h1>
+            <div class="btnAdd">
+                <button class="addTask" id="btnTask">Nouvelle tâche</option>
+                <button class="addObj" id="btnObjective">Nouvel objectif</option>
+            </div>
+            <form id="newTask" class="form">
+                <label for="taskName">Nom de la tâche</label><br>
+                <input type="text" id="taskName" name="taskName" size="50" required><br>
+
+                <label for="taskDesc">Description</label><br>
+                <textarea id="taskDesc" name="taskDesc" rows="6" cols="60" required></textarea><br>
+
+                <label for="taskDate">Date</label><br>
+                <input type="date" id="taskDate" name="taskDate" required><br>
+
+                <label for="taskTime">Heure</label><br>
+                <input type="time" id="taskTime" name="taskTime" required><br>
+
+                <input type="checkbox" id="taskFirst" name="taskFirst" value="Priorité">
+                <label for="taskFirst">Priorité</label>
+
+                <input type="submit" id="taskSubmit" value="Ajouter">
+                <input type="submit" id="taskCancel" value="Annuler">
+            </form>
+            <form id="newObjective" class="form">
+                <label for="objectiveName">Nom de l'objectif</label><br>
+                <input type="text" id="objectiveName" name="objectiveName" size="50" required><br>
+
+                <label for="objectiveDesc">Description</label><br>
+                <textarea id="objectiveDesc" name="objectiveDesc" rows="6" cols="60" required></textarea><br>
+
+                <input type="submit" id="objectiveSubmit" value="Ajouter">
+                <input type="submit" id="objectiveCancel" value="Annuler">
+            </form>
         </div>
     </div>
-    <!--/Ajout[...]/Younes-->
 </topSectionPC>
 </main>
-<footer>
+<footer id="auteurs">
     © Sebastien, Younes & Maxime - Wilders 2023
 </footer>
 <script src="script.js"></script>
