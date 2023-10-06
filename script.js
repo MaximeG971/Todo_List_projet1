@@ -17,10 +17,10 @@ let toggleTheme = 0;
 changeThemeBtn.addEventListener('click', () => {
     if(toggleTheme === 0) {
         document.documentElement.style.setProperty('--ecriture','#262626');
-        document.documentElement.style.setProperty('--background','linear-gradient(to top, #076585, #fff)');
+        document.documentElement.style.setProperty('--background','linear-gradient(to top, #076585, #e5e5e5)');
         toggleTheme++;
     } else {
-        document.documentElement.style.setProperty('--ecriture','#fff8f0');
+        document.documentElement.style.setProperty('--ecriture','black');
         document.documentElement.style.setProperty('--background','linear-gradient(to top, #232526, #414345)'); // voir Midnight City sur uiGradients
         toggleTheme--;
     }
