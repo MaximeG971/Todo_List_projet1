@@ -12,78 +12,76 @@
     <nav>
         <h1 id="todoList"><img src="https://cdn.icon-icons.com/icons2/1859/PNG/512/checklist_117966.png"></h1>
         <div class="changeTheme">
-        <svg xmlns="http://www.w3.org/2000/svg" class="icone" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-            <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
-            <path d="M12 3l0 18"></path>
-            <path d="M12 9l4.65 -4.65"></path>
-            <path d="M12 14.3l7.37 -7.37"></path>
-            <path d="M12 19.6l8.85 -8.85"></path>
-         </svg>
-         Light & Dark
+            <svg xmlns="http://www.w3.org/2000/svg" class="icone" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
+                <path d="M12 3l0 18"></path>
+                <path d="M12 9l4.65 -4.65"></path>
+                <path d="M12 14.3l7.37 -7.37"></path>
+                <path d="M12 19.6l8.85 -8.85"></path>
+             </svg>
+             Light & Dark
         </div>
     </nav>
 <main id="main">
-    <section id="dateHeure">
-    <h2> Date & Heure </h2>
+    <section id="dateHeures">
+        <div id="dateHeure">
+            Nous sommes le <span id="date"></span>, il est <span id="heure"></span>.
+          </div>   
     </section>
     <topSectionPC id="PC">
-        <section id="section_priorites">
-            <div>
-            <h2 class="categorie">Priorités</h2>
-            </div>
-            <div class="container" id="priorites">
-                <div class="card">
-                    <h3>Titre de la tâche</h3>
-                    <h4>Description de la tâche : Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci
-                    voluptate quaerat architecto, quod accusamus quibusdam? Suscipit earum, enim placeat reiciendis
-                    cum cupiditate? Vitae omnis in enim. Animi, aut doloremque? Nihil!</h4>
-                    <h5>Date butoire: 06/10/2023</h5>
-                </div>
-            </div>
-        </section>         
-        <section id="section_objectifs">
-            <div>
-            <h2 class="categorie">Objectifs</h2>
-            </div>
-            <div class="container" id="objectifs">
-                <div class="card">
-                    <h3>Titre de la tâche</h3>
-                    <h4>Description de la tâche : Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci
-                    voluptate quaerat architecto, quod accusamus quibusdam? Suscipit earum, enim placeat reiciendis
-                    cum cupiditate? Vitae omnis in enim. Animi, aut doloremque? Nihil!</h4>
-                    <h5>Date butoire: 06/10/2023</h5>
-                </div>
-            </div>
-        </section>
-        <section id="section_taches">
-            <div>
-            <h2 class="categorie">Tâches</h2>
-            </div>
-            <div class="container" id="taches">
-                <div class="card">
-                    <h3>Titre de la tâche</h3>
-                    <h4>Description de la tâche : Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci
-                    voluptate quaerat architecto, quod accusamus quibusdam? Suscipit earum, enim placeat reiciendis
-                    cum cupiditate? Vitae omnis in enim. Animi, aut doloremque? Nihil!</h4>
-                    <h5>Date butoire: 06/10/2023</h5>
-                </div>
-            </div>
-        </section>
+    <section id="priorites">
+        <h2>Priorités</h2>
+        <!--<article>
+            <h3>Priorités</h3>
+            <p>Description de la tâche</p>
+        </article>-->
+    </section>
+    <section id="objectifs">
+        <h2>Objectifs</h2>
+        <!--<article>
+            <h3>Objectif</h3>
+            <p>Description de la tâche</p>
+        </article>-->
+    </section>
+    <section id="taches">
+        <h2>Tâches</h2>
+        <!--<article>
+            <h3>Tache</h3>
+            <p>Description de la tâche</p>
+        </article>-->
+    </section>
     <!--Ajout de la tâche/objectif/catégorie (Younes)-->
-    <button class="Add" id="Add">+</button>
+    <button class="add" id="add">+</button>
     <div id ="overlay" class="overlay">
         <div id="popup" class="popup">
             <h1>Nouvelle tâche
             <span id="btnClose" class="btnClose">&times;</span>
             </h1>
-            <p>Veuillez ajouter une nouvelle tâche</p>
+            <form id="newTask">
+                <label for ="taskName">Nom de la tâche</label><br>
+                <input type="text" id="taskName" name="taskName" size="50"><br>
+
+                <label for="taskDesc">Description</label><br>
+                <textarea id="taskDesc" name="taskDesc" rows="6" cols="60"></textarea><br>
+
+                <label for="taskDate">Date</label><br>
+                <input type="date" id="taskDate" name="taskDate"><br>
+
+                <label for="taskTime">Heure</label><br>
+                <input type="time" id="taskTime" name="taskTime"><br>
+
+                <input type="checkbox" id="taskFirst" name="taskFirst" value="Priorité">
+                <label for="taskFirst">Priorité</label>
+
+                <input type="submit" id="taskSubmit" value="Ajouter">
+                <input type="submit" id="taskCancel" value="Annuler">
+            </form>
         </div>
     </div>
-    <!--/Ajout[...]/Younes-->
 </topSectionPC>
 </main>
-<footer>
+<footer id="auteurs">
     © Sebastien, Younes & Maxime - Wilders 2023
 </footer>
 <script src="script.js"></script>
