@@ -139,7 +139,7 @@ section > article {
     cursor: pointer;
 }
 
-#taskDesc, #taskName {
+#taskDesc, #taskName, #objectiveDesc, #objectiveName {
     width: 90%;
 }
 

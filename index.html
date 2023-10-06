@@ -32,50 +32,51 @@
     <topSectionPC id="PC">
     <section id="priorites">
         <h2>Priorités</h2>
-        <!--<article>
-            <h3>Priorités</h3>
-            <p>Description de la tâche</p>
-        </article>-->
     </section>
     <section id="objectifs">
         <h2>Objectifs</h2>
-        <!--<article>
-            <h3>Objectif</h3>
-            <p>Description de la tâche</p>
-        </article>-->
     </section>
     <section id="taches">
         <h2>Tâches</h2>
-        <!--<article>
-            <h3>Tache</h3>
-            <p>Description de la tâche</p>
-        </article>-->
     </section>
     <!--Ajout de la tâche/objectif/catégorie (Younes)-->
     <button class="add" id="add">+</button>
-    <div id ="overlay" class="overlay">
+    <div id="overlay" class="overlay">
         <div id="popup" class="popup">
-            <h1>Nouvelle tâche
-            <span id="btnClose" class="btnClose">&times;</span>
-            </h1>
-            <form id="newTask">
-                <label for ="taskName">Nom de la tâche</label><br>
-                <input type="text" id="taskName" name="taskName" size="50"><br>
+            <button class="btnClose" id="btnClose">X</button>
+            <h1>Créer une nouvelle tâche ou un nouvel objectif</h1>
+            <div class="btnAdd">
+                <button class="addTask" id="btnTask">Nouvelle tâche</option>
+                <button class="addObj" id="btnObjective">Nouvel objectif</option>
+            </div>
+            <form id="newTask" class="form">
+                <label for="taskName">Nom de la tâche</label><br>
+                <input type="text" id="taskName" name="taskName" size="50" required><br>
 
                 <label for="taskDesc">Description</label><br>
-                <textarea id="taskDesc" name="taskDesc" rows="6" cols="60"></textarea><br>
+                <textarea id="taskDesc" name="taskDesc" rows="6" cols="60" required></textarea><br>
 
                 <label for="taskDate">Date</label><br>
-                <input type="date" id="taskDate" name="taskDate"><br>
+                <input type="date" id="taskDate" name="taskDate" required><br>
 
                 <label for="taskTime">Heure</label><br>
-                <input type="time" id="taskTime" name="taskTime"><br>
+                <input type="time" id="taskTime" name="taskTime" required><br>
 
                 <input type="checkbox" id="taskFirst" name="taskFirst" value="Priorité">
                 <label for="taskFirst">Priorité</label>
 
                 <input type="submit" id="taskSubmit" value="Ajouter">
                 <input type="submit" id="taskCancel" value="Annuler">
+            </form>
+            <form id="newObjective" class="form">
+                <label for="objectiveName">Nom de l'objectif</label><br>
+                <input type="text" id="objectiveName" name="objectiveName" size="50" required><br>
+
+                <label for="objectiveDesc">Description</label><br>
+                <textarea id="objectiveDesc" name="objectiveDesc" rows="6" cols="60" required></textarea><br>
+
+                <input type="submit" id="objectiveSubmit" value="Ajouter">
+                <input type="submit" id="objectiveCancel" value="Annuler">
             </form>
         </div>
     </div>
