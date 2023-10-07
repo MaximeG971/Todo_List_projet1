@@ -5,7 +5,7 @@
     box-sizing: border-box;
 }
 
-html {
+html, body {
     height: 100%;
 }
 
@@ -19,6 +19,7 @@ body {
     line-height: 1.5;
     font-family: 'Montserrat', sans-serif;
     background: var(--background);
+    background-attachment: fixed;
 }
 
 /* nav */
@@ -147,8 +148,9 @@ section > article {
 /* footer */
 #auteurs {
     color: var(--ecriture);
-    position: absolute;
+    position: fixed;
     bottom: 0;
+    clear: both;
 }
 
 /* Version computer (768px à 1200px) */
